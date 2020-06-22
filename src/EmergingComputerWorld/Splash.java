@@ -38,16 +38,20 @@ public class Splash extends javax.swing.JFrame {
                 // Runs inside of the Swing UI thread
                 SwingUtilities.invokeLater(() -> {
                     loadingBar.setValue(i);
+                    if(i==100){
+                        this.dispose();
+                         Manager.getInstance().loginFrame.setVisible(true);
+                    }
                 });
                 try {
-                    java.lang.Thread.sleep(70);
+                    java.lang.Thread.sleep(30);
                 } catch (InterruptedException ex) {
                     Logger.getLogger(Splash.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
-        }).start();
+        }).start();     
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -58,11 +62,12 @@ public class Splash extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        percentLabel = new javax.swing.JLabel();
         loadingBar = new javax.swing.JProgressBar();
         image = new javax.swing.JLabel();
 
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setLocationByPlatform(true);
         setUndecorated(true);
         setResizable(false);
         setType(java.awt.Window.Type.POPUP);
@@ -70,30 +75,14 @@ public class Splash extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(0, 153, 204));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setBackground(new java.awt.Color(0, 0, 51));
-        jLabel1.setFont(new java.awt.Font("Tahoma", 3, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 153, 153));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setLabelFor(image);
-        jLabel1.setText("Welcome to Emerging World");
-        jLabel1.setNextFocusableComponent(jLabel1);
-        jLabel1.setOpaque(true);
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 610, 40));
-
-        percentLabel.setFont(new java.awt.Font("Tahoma", 3, 48)); // NOI18N
-        percentLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        percentLabel.setText("Loading");
-        percentLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel1.add(percentLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 150, 210, 110));
-
         loadingBar.setFont(new java.awt.Font("Tahoma", 3, 11)); // NOI18N
-        loadingBar.setForeground(new java.awt.Color(0, 0, 0));
+        loadingBar.setForeground(new java.awt.Color(0, 153, 153));
         loadingBar.setAutoscrolls(true);
-        jPanel1.add(loadingBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 620, -1));
+        jPanel1.add(loadingBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 480, 610, 30));
 
-        image.setIcon(new javax.swing.ImageIcon("C:\\Users\\Prashant\\Desktop\\computer.jpg")); // NOI18N
+        image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/EmergingComputerWorld/Screenshot(1).png"))); // NOI18N
         image.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(image, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 610, 400));
+        jPanel1.add(image, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -40, 620, 570));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -103,21 +92,17 @@ public class Splash extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 542, Short.MAX_VALUE)
         );
 
-        setSize(new java.awt.Dimension(610, 400));
+        setSize(new java.awt.Dimension(610, 542));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JLabel image;
-    public javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     public javax.swing.JProgressBar loadingBar;
-    public javax.swing.JLabel percentLabel;
     // End of variables declaration//GEN-END:variables
 }

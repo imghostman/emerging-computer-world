@@ -101,7 +101,7 @@ public class Custlist extends javax.swing.JFrame {
         jScrollPane1.setViewportView(TableOfCustomer);
 
         HomeButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        HomeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EmergingComputerWorld/Home-icon.png"))); // NOI18N
+        HomeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/EmergingComputerWorld/Home-icon.png"))); // NOI18N
         HomeButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 HomeButtonActionPerformed(evt);
@@ -109,7 +109,7 @@ public class Custlist extends javax.swing.JFrame {
         });
 
         FilterByDateButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        FilterByDateButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EmergingComputerWorld/Knob-Snapforward-icon.png"))); // NOI18N
+        FilterByDateButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/EmergingComputerWorld/Knob-Snapforward-icon.png"))); // NOI18N
         FilterByDateButton.setText("Filter By Date");
         FilterByDateButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -118,7 +118,7 @@ public class Custlist extends javax.swing.JFrame {
         });
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EmergingComputerWorld/User-Group-icon (1).png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/EmergingComputerWorld/User-Group-icon (1).png"))); // NOI18N
 
         javax.swing.GroupLayout customertablepannelLayout = new javax.swing.GroupLayout(customertablepannel);
         customertablepannel.setLayout(customertablepannelLayout);
@@ -129,8 +129,8 @@ public class Custlist extends javax.swing.JFrame {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(DetailCustomerLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 497, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(67, 67, 67)
-                .addComponent(HomeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(124, 124, 124)
+                .addComponent(HomeButton))
             .addComponent(jScrollPane1)
             .addGroup(customertablepannelLayout.createSequentialGroup()
                 .addGap(447, 447, 447)

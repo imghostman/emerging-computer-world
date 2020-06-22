@@ -47,10 +47,10 @@ public class Login extends javax.swing.JFrame {
 
         setUndecorated(true);
 
-        nameLabel.setFont(new java.awt.Font("Tahoma", 3, 48)); // NOI18N
+        nameLabel.setFont(new java.awt.Font("Tahoma", 3, 36)); // NOI18N
         nameLabel.setForeground(java.awt.SystemColor.activeCaption);
         nameLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        nameLabel.setText("Emerging World");
+        nameLabel.setText("Emerging Computers");
 
         ExitButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         ExitButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/EmergingComputerWorld/Knob-Cancel-icon.png"))); // NOI18N
@@ -82,6 +82,7 @@ public class Login extends javax.swing.JFrame {
         LoginDetailsPannel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Enter Login Details", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Tahoma", 1, 14))); // NOI18N
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/EmergingComputerWorld/user.png"))); // NOI18N
         jLabel1.setText("User ID :");
 
         txtUserId.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -92,6 +93,7 @@ public class Login extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/EmergingComputerWorld/Apps-Keys-icon.png"))); // NOI18N
         jLabel2.setText("Password :");
 
         jLabel3.setFont(new java.awt.Font("Arial Narrow", 2, 18)); // NOI18N
@@ -151,7 +153,7 @@ public class Login extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LoginPannelLayout.createSequentialGroup()
                 .addComponent(RegisteButton)
                 .addGap(46, 46, 46)
-                .addComponent(nameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 427, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(nameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 472, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(ExitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(LoginPannelLayout.createSequentialGroup()
@@ -235,7 +237,7 @@ public class Login extends javax.swing.JFrame {
                             JOptionPane.showMessageDialog(this, "Sorry password is wrong");
                         } else {
                             JOptionPane.showMessageDialog(null, "Your Login Was Successful");
-
+//ei 3 ta line prob kortese
                             Manager.getInstance().createFrames();
                             Manager.getInstance().homeFrame.setVisible(true);
                             this.setVisible(false);

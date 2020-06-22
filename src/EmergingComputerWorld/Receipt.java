@@ -182,7 +182,7 @@ public class Receipt extends javax.swing.JFrame {
 
         invoiceLabel.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         invoiceLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        invoiceLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EmergingComputerWorld/invoice-icon.png"))); // NOI18N
+        invoiceLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/EmergingComputerWorld/invoice-icon.png"))); // NOI18N
         invoiceLabel.setText("Invoice");
 
         billDetailPannel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -203,35 +203,35 @@ public class Receipt extends javax.swing.JFrame {
         jLabel6.setText("Amount");
 
         Laptoplabel.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        Laptoplabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EmergingComputerWorld/PortableComputer.png"))); // NOI18N
+        Laptoplabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/EmergingComputerWorld/laptop-icon.png"))); // NOI18N
         Laptoplabel.setText("Laptop");
 
         CAlabel.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        CAlabel.setIcon(new javax.swing.ImageIcon("C:\\Users\\Prashant\\Downloads\\accessories.icon.png")); // NOI18N
+        CAlabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/EmergingComputerWorld/Headphones-icon.png"))); // NOI18N
         CAlabel.setText("Computer Accessories");
 
         CClabel.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        CClabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EmergingComputerWorld/Motherboard.png"))); // NOI18N
+        CClabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/EmergingComputerWorld/Motherboard.png"))); // NOI18N
         CClabel.setText("Computer Components");
 
         DSlabel.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        DSlabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EmergingComputerWorld/USBFlashCard_CardReader_Card.png"))); // NOI18N
+        DSlabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/EmergingComputerWorld/USBFlashCard_CardReader_Card.png"))); // NOI18N
         DSlabel.setText("Drives and Storages");
 
         PrinterLabel.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        PrinterLabel.setIcon(new javax.swing.ImageIcon("C:\\Users\\Prashant\\Downloads\\print-icon.png")); // NOI18N
+        PrinterLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/EmergingComputerWorld/Print-icon.png"))); // NOI18N
         PrinterLabel.setText("Printers");
 
         NetworkingLabel.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        NetworkingLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EmergingComputerWorld/EthernetCable.png"))); // NOI18N
+        NetworkingLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/EmergingComputerWorld/EthernetCable.png"))); // NOI18N
         NetworkingLabel.setText("Networking");
 
         NotebookLabel.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        NotebookLabel.setIcon(new javax.swing.ImageIcon("C:\\Users\\Prashant\\Downloads\\Laptop-wifi-icon.png")); // NOI18N
+        NotebookLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/EmergingComputerWorld/PortableComputer.png"))); // NOI18N
         NotebookLabel.setText("Notebook");
 
         DesktopLabel.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        DesktopLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EmergingComputerWorld/Computer.png"))); // NOI18N
+        DesktopLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/EmergingComputerWorld/Computer.png"))); // NOI18N
         DesktopLabel.setText("Desktops");
 
         laptopQuantity.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
@@ -307,7 +307,7 @@ public class Receipt extends javax.swing.JFrame {
         desktopsAmount.setText("Desktops Amount");
 
         totalJLabel.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        totalJLabel.setIcon(new javax.swing.ImageIcon("C:\\Users\\Prashant\\Downloads\\06-Wallet-icon.png")); // NOI18N
+        totalJLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/EmergingComputerWorld/06-Wallet-icon.png"))); // NOI18N
         totalJLabel.setText("Total Amount");
         totalJLabel.setToolTipText("");
 
@@ -453,7 +453,7 @@ public class Receipt extends javax.swing.JFrame {
         );
 
         CancelButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        CancelButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EmergingComputerWorld/Knob-Cancel-icon.png"))); // NOI18N
+        CancelButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/EmergingComputerWorld/Knob-Cancel-icon.png"))); // NOI18N
         CancelButton.setText("Cancel Bill");
         CancelButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -462,7 +462,7 @@ public class Receipt extends javax.swing.JFrame {
         });
 
         ConfirmButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        ConfirmButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EmergingComputerWorld/Knob-Valid-Green-icon.png"))); // NOI18N
+        ConfirmButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/EmergingComputerWorld/Knob-Valid-Green-icon.png"))); // NOI18N
         ConfirmButton.setText("Confirm  Bill");
         ConfirmButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -503,7 +503,7 @@ public class Receipt extends javax.swing.JFrame {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(InvoicePannelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(CancelButton, javax.swing.GroupLayout.DEFAULT_SIZE, 67, Short.MAX_VALUE)
+                    .addComponent(CancelButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(ConfirmButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );

@@ -102,7 +102,7 @@ public class Inventory extends javax.swing.JFrame {
         InventoryLabel.setText("Inventory");
 
         HomeButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        HomeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EmergingComputerWorld/Home-icon.png"))); // NOI18N
+        HomeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/EmergingComputerWorld/Home-icon.png"))); // NOI18N
         HomeButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 HomeButtonActionPerformed(evt);
@@ -142,7 +142,7 @@ public class Inventory extends javax.swing.JFrame {
         QuantityLabel.setText("Quantity");
 
         MakeChangesButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        MakeChangesButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EmergingComputerWorld/Knob-Valid-Green-icon.png"))); // NOI18N
+        MakeChangesButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/EmergingComputerWorld/Knob-Valid-Green-icon.png"))); // NOI18N
         MakeChangesButton.setText("MAKE CHANGES");
         MakeChangesButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -191,8 +191,8 @@ public class Inventory extends javax.swing.JFrame {
                 .addComponent(UserIdlabel, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
                 .addComponent(InventoryLabel)
-                .addGap(18, 18, 18)
-                .addComponent(HomeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(72, 72, 72)
+                .addComponent(HomeButton)
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
                 .addGap(70, 70, 70)

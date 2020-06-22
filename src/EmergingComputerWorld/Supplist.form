@@ -179,7 +179,7 @@
               <Font name="Tahoma" size="18" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/EmergingComputerWorld/Home-icon.png"/>
+              <Image iconType="3" name="/resources/EmergingComputerWorld/Home-icon.png"/>
             </Property>
           </Properties>
           <Events>
@@ -354,7 +354,7 @@
                   <Font name="Tahoma" size="24" style="1"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/EmergingComputerWorld/Knob-Add-icon.png"/>
+                  <Image iconType="3" name="/resources/EmergingComputerWorld/Knob-Add-icon.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Insert"/>
               </Properties>
@@ -368,7 +368,7 @@
                   <Font name="Tahoma" size="24" style="1"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/EmergingComputerWorld/Actions-edit-clear-icon.png"/>
+                  <Image iconType="3" name="/resources/EmergingComputerWorld/Actions-edit-clear-icon.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Clear"/>
               </Properties>
@@ -382,7 +382,7 @@
                   <Font name="Tahoma" size="24" style="1"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/EmergingComputerWorld/Knob-Snapforward-icon.png"/>
+                  <Image iconType="3" name="/resources/EmergingComputerWorld/Knob-Refresh-icon.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Update"/>
               </Properties>
@@ -396,7 +396,7 @@
                   <Font name="Tahoma" size="24" style="1"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/EmergingComputerWorld/Misc-Delete-Database-icon.png"/>
+                  <Image iconType="3" name="/resources/EmergingComputerWorld/Misc-Delete-Database-icon.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Delete"/>
               </Properties>

@@ -135,7 +135,7 @@ public class Supplist extends javax.swing.JFrame {
         supplistLabel.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         supplistLabel.setForeground(new java.awt.Color(255, 255, 255));
         supplistLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        supplistLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EmergingComputerWorld/User-Group-icon.png"))); // NOI18N
+        supplistLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/EmergingComputerWorld/User-Group-icon.png"))); // NOI18N
         supplistLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         supplierTable.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -166,7 +166,7 @@ public class Supplist extends javax.swing.JFrame {
         jScrollPane1.setViewportView(supplierTable);
 
         HomeButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        HomeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EmergingComputerWorld/Home-icon.png"))); // NOI18N
+        HomeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/EmergingComputerWorld/Home-icon.png"))); // NOI18N
         HomeButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 HomeButtonActionPerformed(evt);
@@ -201,7 +201,7 @@ public class Supplist extends javax.swing.JFrame {
         jLabel7.setText("Enter Details");
 
         insertButton.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        insertButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EmergingComputerWorld/Knob-Add-icon.png"))); // NOI18N
+        insertButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/EmergingComputerWorld/Knob-Add-icon.png"))); // NOI18N
         insertButton.setText("Insert");
         insertButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -210,7 +210,7 @@ public class Supplist extends javax.swing.JFrame {
         });
 
         clearButton.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        clearButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EmergingComputerWorld/Actions-edit-clear-icon.png"))); // NOI18N
+        clearButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/EmergingComputerWorld/Actions-edit-clear-icon.png"))); // NOI18N
         clearButton.setText("Clear");
         clearButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -219,7 +219,7 @@ public class Supplist extends javax.swing.JFrame {
         });
 
         updateButton.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        updateButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EmergingComputerWorld/Knob-Snapforward-icon.png"))); // NOI18N
+        updateButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/EmergingComputerWorld/Knob-Refresh-icon.png"))); // NOI18N
         updateButton.setText("Update");
         updateButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -228,7 +228,7 @@ public class Supplist extends javax.swing.JFrame {
         });
 
         deleteButton.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        deleteButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EmergingComputerWorld/Misc-Delete-Database-icon.png"))); // NOI18N
+        deleteButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/EmergingComputerWorld/Misc-Delete-Database-icon.png"))); // NOI18N
         deleteButton.setText("Delete");
         deleteButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

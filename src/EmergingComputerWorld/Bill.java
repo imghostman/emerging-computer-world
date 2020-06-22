@@ -8,8 +8,6 @@ package EmergingComputerWorld;
 import javax.swing.*;
 import java.sql.*;
 import java.text.SimpleDateFormat;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -83,11 +81,11 @@ public class Bill extends javax.swing.JFrame {
         setUndecorated(true);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EmergingComputerWorld/invoice-icon.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/EmergingComputerWorld/invoice-icon.png"))); // NOI18N
         jLabel1.setText("Billing");
 
         GenerateButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        GenerateButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EmergingComputerWorld/Knob-Play-icon.png"))); // NOI18N
+        GenerateButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/EmergingComputerWorld/Knob-Play-icon.png"))); // NOI18N
         GenerateButton.setText("Generate Bill");
         GenerateButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -96,7 +94,7 @@ public class Bill extends javax.swing.JFrame {
         });
 
         DiscardButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        DiscardButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EmergingComputerWorld/Knob-Cancel-icon.png"))); // NOI18N
+        DiscardButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/EmergingComputerWorld/Knob-Cancel-icon.png"))); // NOI18N
         DiscardButton.setText("Discard Bill");
         DiscardButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

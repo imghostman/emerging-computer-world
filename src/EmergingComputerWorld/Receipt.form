@@ -80,7 +80,7 @@
                   <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="CancelButton" pref="67" max="32767" attributes="0"/>
+                      <Component id="CancelButton" max="32767" attributes="0"/>
                       <Component id="ConfirmButton" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -96,7 +96,7 @@
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/EmergingComputerWorld/invoice-icon.png"/>
+              <Image iconType="3" name="/resources/EmergingComputerWorld/invoice-icon.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Invoice"/>
           </Properties>
@@ -327,7 +327,7 @@
                   <Font name="Tahoma" size="16" style="0"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/EmergingComputerWorld/PortableComputer.png"/>
+                  <Image iconType="3" name="/resources/EmergingComputerWorld/laptop-icon.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Laptop"/>
               </Properties>
@@ -338,7 +338,7 @@
                   <Font name="Tahoma" size="16" style="0"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\Prashant\Downloads\accessories.icon.png"/>
+                  <Image iconType="3" name="/resources/EmergingComputerWorld/Headphones-icon.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Computer Accessories"/>
               </Properties>
@@ -349,7 +349,7 @@
                   <Font name="Tahoma" size="16" style="0"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/EmergingComputerWorld/Motherboard.png"/>
+                  <Image iconType="3" name="/resources/EmergingComputerWorld/Motherboard.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Computer Components"/>
               </Properties>
@@ -360,7 +360,7 @@
                   <Font name="Tahoma" size="16" style="0"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/EmergingComputerWorld/USBFlashCard_CardReader_Card.png"/>
+                  <Image iconType="3" name="/resources/EmergingComputerWorld/USBFlashCard_CardReader_Card.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Drives and Storages"/>
               </Properties>
@@ -371,7 +371,7 @@
                   <Font name="Tahoma" size="16" style="0"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\Prashant\Downloads\print-icon.png"/>
+                  <Image iconType="3" name="/resources/EmergingComputerWorld/Print-icon.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Printers"/>
               </Properties>
@@ -382,7 +382,7 @@
                   <Font name="Tahoma" size="16" style="0"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/EmergingComputerWorld/EthernetCable.png"/>
+                  <Image iconType="3" name="/resources/EmergingComputerWorld/EthernetCable.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Networking"/>
               </Properties>
@@ -393,7 +393,7 @@
                   <Font name="Tahoma" size="16" style="0"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\Prashant\Downloads\Laptop-wifi-icon.png"/>
+                  <Image iconType="3" name="/resources/EmergingComputerWorld/PortableComputer.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Notebook"/>
               </Properties>
@@ -404,7 +404,7 @@
                   <Font name="Tahoma" size="16" style="0"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/EmergingComputerWorld/Computer.png"/>
+                  <Image iconType="3" name="/resources/EmergingComputerWorld/Computer.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Desktops"/>
               </Properties>
@@ -609,7 +609,7 @@
                   <Font name="Tahoma" size="16" style="1"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\Prashant\Downloads\06-Wallet-icon.png"/>
+                  <Image iconType="3" name="/resources/EmergingComputerWorld/06-Wallet-icon.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Total Amount"/>
                 <Property name="toolTipText" type="java.lang.String" value=""/>
@@ -625,7 +625,7 @@
               <Font name="Tahoma" size="18" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/EmergingComputerWorld/Knob-Cancel-icon.png"/>
+              <Image iconType="3" name="/resources/EmergingComputerWorld/Knob-Cancel-icon.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Cancel Bill"/>
           </Properties>
@@ -639,7 +639,7 @@
               <Font name="Tahoma" size="18" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/EmergingComputerWorld/Knob-Valid-Green-icon.png"/>
+              <Image iconType="3" name="/resources/EmergingComputerWorld/Knob-Valid-Green-icon.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Confirm  Bill"/>
           </Properties>

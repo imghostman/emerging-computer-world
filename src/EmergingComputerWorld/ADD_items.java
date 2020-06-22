@@ -103,7 +103,7 @@ public class ADD_items extends javax.swing.JFrame {
         itemNum.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
 
         ResetButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        ResetButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EmergingComputerWorld/Knob-Red-icon.png"))); // NOI18N
+        ResetButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/EmergingComputerWorld/Knob-Red-icon.png"))); // NOI18N
         ResetButton.setText("Reset");
         ResetButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -112,7 +112,7 @@ public class ADD_items extends javax.swing.JFrame {
         });
 
         UpdateButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        UpdateButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EmergingComputerWorld/Knob-Refresh-icon.png"))); // NOI18N
+        UpdateButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/EmergingComputerWorld/Knob-Refresh-icon.png"))); // NOI18N
         UpdateButton.setText("Update Data");
         UpdateButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -121,7 +121,7 @@ public class ADD_items extends javax.swing.JFrame {
         });
 
         Back2InventoryButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        Back2InventoryButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EmergingComputerWorld/Knob-Fast-Rewind-icon.png"))); // NOI18N
+        Back2InventoryButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/EmergingComputerWorld/Knob-Fast-Rewind-icon.png"))); // NOI18N
         Back2InventoryButton.setText("Back To Inventory");
         Back2InventoryButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -129,7 +129,7 @@ public class ADD_items extends javax.swing.JFrame {
             }
         });
 
-        UserIdlabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EmergingComputerWorld/guard.png"))); // NOI18N
+        UserIdlabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/EmergingComputerWorld/guard.png"))); // NOI18N
         UserIdlabel.setText("UserId");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -140,7 +140,7 @@ public class ADD_items extends javax.swing.JFrame {
                 .addComponent(ResetButton, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(129, 129, 129)
                 .addComponent(UpdateItemLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
                 .addComponent(Back2InventoryButton))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

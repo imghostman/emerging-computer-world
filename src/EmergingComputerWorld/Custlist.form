@@ -43,8 +43,8 @@
                   <Component id="jLabel1" min="-2" pref="85" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="DetailCustomerLabel" min="-2" pref="497" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
-                  <Component id="HomeButton" min="-2" pref="162" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="124" max="-2" attributes="0"/>
+                  <Component id="HomeButton" min="-2" max="-2" attributes="0"/>
               </Group>
               <Component id="jScrollPane1" alignment="0" max="32767" attributes="0"/>
               <Group type="102" alignment="0" attributes="0">
@@ -171,7 +171,7 @@
               <Font name="Tahoma" size="18" style="0"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/EmergingComputerWorld/Home-icon.png"/>
+              <Image iconType="3" name="/resources/EmergingComputerWorld/Home-icon.png"/>
             </Property>
           </Properties>
           <Events>
@@ -184,7 +184,7 @@
               <Font name="Tahoma" size="18" style="0"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/EmergingComputerWorld/Knob-Snapforward-icon.png"/>
+              <Image iconType="3" name="/resources/EmergingComputerWorld/Knob-Snapforward-icon.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Filter By Date"/>
           </Properties>

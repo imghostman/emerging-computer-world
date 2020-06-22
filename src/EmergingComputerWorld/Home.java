@@ -67,7 +67,7 @@ public class Home extends javax.swing.JFrame {
         setUndecorated(true);
 
         UserIdlabel.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        UserIdlabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EmergingComputerWorld/guard.png"))); // NOI18N
+        UserIdlabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/EmergingComputerWorld/guard.png"))); // NOI18N
         UserIdlabel.setText("userId");
 
         ShopnameLabel.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
@@ -77,7 +77,7 @@ public class Home extends javax.swing.JFrame {
 
         LogOutButton.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         LogOutButton.setForeground(new java.awt.Color(255, 255, 255));
-        LogOutButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EmergingComputerWorld/Button-Log-Off-icon.png"))); // NOI18N
+        LogOutButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/EmergingComputerWorld/Button-Log-Off-icon.png"))); // NOI18N
         LogOutButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 LogOutButtonActionPerformed(evt);
@@ -101,7 +101,7 @@ public class Home extends javax.swing.JFrame {
         optionPannel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Options", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Tahoma", 1, 18))); // NOI18N
 
         CreateBillButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        CreateBillButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EmergingComputerWorld/Create-New-icon.png"))); // NOI18N
+        CreateBillButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/EmergingComputerWorld/Create-New-icon.png"))); // NOI18N
         CreateBillButton.setText("Create Bill");
         CreateBillButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         CreateBillButton.addActionListener(new java.awt.event.ActionListener() {
@@ -111,7 +111,7 @@ public class Home extends javax.swing.JFrame {
         });
 
         ListOfSupplierButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        ListOfSupplierButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EmergingComputerWorld/User-Group-icon.png"))); // NOI18N
+        ListOfSupplierButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/EmergingComputerWorld/User-Group-icon.png"))); // NOI18N
         ListOfSupplierButton.setText("List Of Suppliers");
         ListOfSupplierButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         ListOfSupplierButton.addActionListener(new java.awt.event.ActionListener() {
@@ -121,7 +121,7 @@ public class Home extends javax.swing.JFrame {
         });
 
         InventoryManagementButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        InventoryManagementButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EmergingComputerWorld/Inventory-icon.png"))); // NOI18N
+        InventoryManagementButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/EmergingComputerWorld/Inventory-icon.png"))); // NOI18N
         InventoryManagementButton.setText("Inventory");
         InventoryManagementButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         InventoryManagementButton.addActionListener(new java.awt.event.ActionListener() {
@@ -131,7 +131,7 @@ public class Home extends javax.swing.JFrame {
         });
 
         ListOfCustomerButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        ListOfCustomerButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EmergingComputerWorld/User-Group-icon (1).png"))); // NOI18N
+        ListOfCustomerButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/EmergingComputerWorld/User-Group-icon (1).png"))); // NOI18N
         ListOfCustomerButton.setText("List Of Customers");
         ListOfCustomerButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         ListOfCustomerButton.addActionListener(new java.awt.event.ActionListener() {
@@ -202,7 +202,7 @@ public class Home extends javax.swing.JFrame {
                     .addComponent(LogOutButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(ShopnameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(UserIdlabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(shopDetails, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(contactDetails, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -210,7 +210,7 @@ public class Home extends javax.swing.JFrame {
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(31, 31, 31)
                 .addComponent(optionPannel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(37, Short.MAX_VALUE))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
         pack();
