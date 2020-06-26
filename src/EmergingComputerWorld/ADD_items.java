@@ -15,7 +15,10 @@ import java.sql.*;
  */
 public class ADD_items extends javax.swing.JFrame {
 
-   // int id;
+    Connection con;
+    Statement st;
+    PreparedStatement pst = null;
+    ResultSet rs;
 
     /**
      * Creates new form ADD_items
@@ -23,8 +26,6 @@ public class ADD_items extends javax.swing.JFrame {
     public ADD_items() {
         initComponents();
         setLocationRelativeTo(null);
-//        id = x;
-      //  id = Manager.userId;
         UserIdlabel.setText("User id:" + Manager.userId);
     }
 
@@ -51,8 +52,9 @@ public class ADD_items extends javax.swing.JFrame {
         UserIdlabel = new javax.swing.JLabel();
 
         setUndecorated(true);
+        setResizable(false);
 
-        UpdateItemLabel.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        UpdateItemLabel.setFont(new java.awt.Font("Segoe Script", 1, 24)); // NOI18N
         UpdateItemLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         UpdateItemLabel.setText("UPDATE ITEMS");
 
@@ -94,11 +96,7 @@ public class ADD_items extends javax.swing.JFrame {
         SelectItemCombobox.setForeground(new java.awt.Color(255, 255, 255));
         SelectItemCombobox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "----Select Item----", "Laptop", "Computer Accessories", "Computer Components", "Drives and Storage", "Printer", "Networking", "Notebook", "Desktops" }));
         SelectItemCombobox.setAutoscrolls(true);
-        SelectItemCombobox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SelectItemComboboxActionPerformed(evt);
-            }
-        });
+       
 
         itemNum.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
 
@@ -138,9 +136,9 @@ public class ADD_items extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addComponent(ResetButton, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(129, 129, 129)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(UpdateItemLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                .addGap(67, 67, 67)
                 .addComponent(Back2InventoryButton))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -155,7 +153,7 @@ public class ADD_items extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(50, 50, 50)
                 .addComponent(SelectItemCombobox, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 104, Short.MAX_VALUE)
                 .addComponent(itemNum, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(143, 143, 143))
         );
@@ -164,9 +162,8 @@ public class ADD_items extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(Back2InventoryButton, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(UpdateItemLabel)
-                        .addComponent(ResetButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(ResetButton, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(UpdateItemLabel, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(52, 52, 52)
@@ -200,7 +197,7 @@ public class ADD_items extends javax.swing.JFrame {
     private void UpdateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UpdateButtonActionPerformed
         // TODO add your handling code here:
         int hw = 0, qty = (Integer) itemNum.getValue();
-        if (SelectItemCombobox.getSelectedItem() == "Laptops") {
+        if (SelectItemCombobox.getSelectedItem() == "Laptop") {
             hw = 311;
         } else if (SelectItemCombobox.getSelectedItem() == "Computer Accessories") {
             hw = 312;
@@ -223,19 +220,19 @@ public class ADD_items extends javax.swing.JFrame {
         } else {
             try {
                 Class.forName("java.sql.Driver");
-                Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/google", "root", "root");
+                con = DriverManager.getConnection("jdbc:mysql://localhost:3306/stockmanagement?&serverTimezone=UTC", "root", "");
                 String sql;
                 if (addRadioButton.isSelected()) {
                     sql = "update hwstock set quantity=quantity+" + qty + " where shopid=" + Manager.userId + " and hid=" + hw + ";";
-                    Statement st = con.createStatement();
+                    st = con.createStatement();
                     st.executeUpdate(sql);
                     JOptionPane.showMessageDialog(this, "Changes are made to the inventory");
                     new Inventory().setVisible(true);
                     setVisible(false);
                 } else if (deleteRadioButton.isSelected()) {
                     sql = "select * from hwstock where shopid=" + Manager.userId + ";";
-                    Statement st = con.createStatement();
-                    ResultSet rs = st.executeQuery(sql);
+                    st = con.createStatement();
+                    rs = st.executeQuery(sql);
                     rs.next();
                     int x = Integer.parseInt(rs.getString("quantity"));
                     if (x < qty) {
@@ -252,6 +249,7 @@ public class ADD_items extends javax.swing.JFrame {
             } catch (HeadlessException | ClassNotFoundException | NumberFormatException | SQLException e) {
                 JOptionPane.showMessageDialog(null, e.getMessage());
             }
+            // use popup menu instead of JOptionPane for button action/ any other successful actions
         }
     }//GEN-LAST:event_UpdateButtonActionPerformed
 
@@ -276,11 +274,7 @@ public class ADD_items extends javax.swing.JFrame {
         itemNum.setValue(0);
     }//GEN-LAST:event_ResetButtonActionPerformed
 
-    private void SelectItemComboboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SelectItemComboboxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_SelectItemComboboxActionPerformed
-
-
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel AddRemovePannel;
     private javax.swing.JButton Back2InventoryButton;

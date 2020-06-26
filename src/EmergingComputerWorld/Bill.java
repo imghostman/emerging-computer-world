@@ -27,8 +27,7 @@ public class Bill extends javax.swing.JFrame {
     public Bill() {
         initComponents();
         setLocationRelativeTo(null);
-       // userid = Manager.userId;
-        txtShopId.setText("" + Manager.userId);
+          txtShopId.setText("" + Manager.userId);
     }
 
     /**
@@ -79,8 +78,9 @@ public class Bill extends javax.swing.JFrame {
         dateChooser = new com.toedter.calendar.JDateChooser();
 
         setUndecorated(true);
+        setResizable(false);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe Script", 1, 36)); // NOI18N
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/EmergingComputerWorld/invoice-icon.png"))); // NOI18N
         jLabel1.setText("Billing");
 
@@ -275,7 +275,7 @@ public class Bill extends javax.swing.JFrame {
 
         CustomerAddressLabel.setText("Customer Address:");
 
-        EmailLabel.setText("Customer Email ID:");
+        EmailLabel.setText("Customer e-Mail ID:");
 
         ContactNoLabel.setText("Contact No.:");
 
@@ -395,6 +395,7 @@ public class Bill extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void GenerateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GenerateButtonActionPerformed

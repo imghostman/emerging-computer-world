@@ -1,6 +1,9 @@
 package EmergingComputerWorld;
 
 import java.sql.*;
+import java.text.SimpleDateFormat;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.*;
 
@@ -10,7 +13,6 @@ import javax.swing.*;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author Prashant
@@ -18,31 +20,22 @@ import javax.swing.*;
 public class Custlist extends javax.swing.JFrame {
 
     //int userid;
-
     /**
      * Creates new form Custlist
      */
     public Custlist() {
         initComponents();
-        setLocationRelativeTo(null);
-             // userid = Manager.userId;
+    setLocationRelativeTo(null);
+
         try {
             Class.forName("java.sql.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/stockmanagement?&serverTimezone=UTC", "root", "");
-                       String sql, id, name, add, phone1, phone2, mail, bill, bdate;
+            String sql, id, name, add, phone1, phone2, mail, bill, bdate;
             sql = "select * from customer where shopid=" + Manager.userId + ";";
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery(sql);
             DefaultTableModel model = (DefaultTableModel) TableOfCustomer.getModel();
             model.setRowCount(0);
-            // int rows=model.getRowCount();  
-            /*  if(rows>0)
-            {
-                for(int i=0;i<rows;i++)
-                {
-                    model.removeRow(0);
-                }
-            }*/
             while (rs.next()) {
                 id = rs.getString("cust_id");
                 name = rs.getString("cust_name");
@@ -76,10 +69,13 @@ public class Custlist extends javax.swing.JFrame {
         FilterByDateButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         txtDateFilter = new com.toedter.calendar.JDateChooser();
+        showButton = new javax.swing.JButton();
 
         setUndecorated(true);
+        setResizable(false);
 
-        DetailCustomerLabel.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        DetailCustomerLabel.setFont(new java.awt.Font("Segoe Script", 1, 36)); // NOI18N
+        DetailCustomerLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/EmergingComputerWorld/User-Group-icon (1).png"))); // NOI18N
         DetailCustomerLabel.setText("Details Of Customers");
 
         TableOfCustomer.setModel(new javax.swing.table.DefaultTableModel(
@@ -120,23 +116,35 @@ public class Custlist extends javax.swing.JFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/EmergingComputerWorld/User-Group-icon (1).png"))); // NOI18N
 
+        showButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        showButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/EmergingComputerWorld/Knob-Snapback-icon.png"))); // NOI18N
+        showButton.setText("Show All");
+        showButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                showButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout customertablepannelLayout = new javax.swing.GroupLayout(customertablepannel);
         customertablepannel.setLayout(customertablepannelLayout);
         customertablepannelLayout.setHorizontalGroup(
             customertablepannelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(customertablepannelLayout.createSequentialGroup()
-                .addContainerGap(205, Short.MAX_VALUE)
+                .addContainerGap(146, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(DetailCustomerLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 497, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(124, 124, 124)
-                .addComponent(HomeButton))
+                .addGap(216, 216, 216)
+                .addComponent(HomeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addComponent(jScrollPane1)
             .addGroup(customertablepannelLayout.createSequentialGroup()
-                .addGap(447, 447, 447)
-                .addGroup(customertablepannelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(FilterByDateButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txtDateFilter, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(168, 168, 168)
+                .addGroup(customertablepannelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtDateFilter, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(customertablepannelLayout.createSequentialGroup()
+                        .addComponent(FilterByDateButton)
+                        .addGap(255, 255, 255)
+                        .addComponent(showButton, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         customertablepannelLayout.setVerticalGroup(
@@ -153,11 +161,12 @@ public class Custlist extends javax.swing.JFrame {
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(txtDateFilter, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
-                .addComponent(FilterByDateButton, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(9, 9, 9)
+                .addGroup(customertablepannelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(FilterByDateButton, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
+                    .addComponent(showButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -172,6 +181,7 @@ public class Custlist extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void HomeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HomeButtonActionPerformed
@@ -188,19 +198,21 @@ public class Custlist extends javax.swing.JFrame {
             Class.forName("java.sql.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/stockmanagement?&serverTimezone=UTC", "root", "");
             String sql, id, name, add, phone1, phone2, mail, bill, bdate;
-            bdate = String.valueOf(txtDateFilter.getDate());
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+            bdate = sdf.format(txtDateFilter.getDate());
+
             sql = "select * from customer where shopid=" + Manager.userId + " and billdate='" + bdate + "';";
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery(sql);
             DefaultTableModel model = (DefaultTableModel) TableOfCustomer.getModel();
-            
+
             int rows = model.getRowCount();
             if (rows > 0) {
                 for (int i = 0; i < rows; i++) {
                     model.removeRow(0);
                 }
             }
-            
+
             while (rs.next()) {
                 id = rs.getString("cust_id");
                 name = rs.getString("cust_name");
@@ -217,6 +229,45 @@ public class Custlist extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_FilterByDateButtonActionPerformed
 
+    private void showButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showButtonActionPerformed
+
+        // TODO add your handling code here:
+            try {                                         
+                
+                
+                try {
+                    
+                    Class.forName("java.sql.Driver");
+                } catch (ClassNotFoundException ex) {
+                    Logger.getLogger(Custlist.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/stockmanagement?&serverTimezone=UTC", "root", "");
+                String sql, id, name, add, phone1, phone2, mail, bill, bdate;
+                sql = "select * from customer where shopid=" + Manager.userId + ";";
+                Statement st = con.createStatement();
+                ResultSet rs = st.executeQuery(sql);
+                DefaultTableModel model = (DefaultTableModel) TableOfCustomer.getModel();
+                model.setRowCount(0);
+                while (rs.next()) {
+                    id = rs.getString("cust_id");
+                    name = rs.getString("cust_name");
+                    add = rs.getString("cust_add");
+                    phone1 = rs.getString("custphone1");
+                    phone2 = rs.getString("custphone2");
+                    mail = rs.getString("custemail");
+                    bill = rs.getString("total");
+                    bdate = rs.getString("billdate");
+                    model.addRow(new Object[]{id, name, add, phone1, phone2, mail, bill, bdate});
+                }
+                
+                
+            } catch (SQLException ex) {
+                Logger.getLogger(Custlist.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+
+    }//GEN-LAST:event_showButtonActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel DetailCustomerLabel;
@@ -226,6 +277,7 @@ public class Custlist extends javax.swing.JFrame {
     private javax.swing.JPanel customertablepannel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JButton showButton;
     private com.toedter.calendar.JDateChooser txtDateFilter;
     // End of variables declaration//GEN-END:variables
 }

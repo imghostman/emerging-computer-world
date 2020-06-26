@@ -22,13 +22,10 @@ public class Inventory extends javax.swing.JFrame {
     public Inventory() {
         initComponents();
         setLocationRelativeTo(null);
-       // id = Manager.userId;
-        //System.out.println("" + Integer.toString(id));
         UserIdlabel.setText("UserID: " + Integer.toString(Manager.userId));
         try {
             Class.forName("java.sql.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/stockmanagement?&serverTimezone=UTC", "root", "");
-            System.out.println("Connection is created succcessfully:");
             String sql;
             sql = "select * from hwstock where shopid=" + Manager.userId + ";";
             Statement st = con.createStatement();
@@ -94,11 +91,12 @@ public class Inventory extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTextPane1);
 
         setUndecorated(true);
+        setResizable(false);
 
         UserIdlabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
-        InventoryLabel.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        InventoryLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        InventoryLabel.setFont(new java.awt.Font("Segoe Script", 1, 36)); // NOI18N
+        InventoryLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/EmergingComputerWorld/Inventory-icon.png"))); // NOI18N
         InventoryLabel.setText("Inventory");
 
         HomeButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -189,11 +187,10 @@ public class Inventory extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(UserIdlabel, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(InventoryLabel)
-                .addGap(72, 72, 72)
-                .addComponent(HomeButton)
-                .addContainerGap())
+                .addGap(108, 108, 108)
+                .addComponent(HomeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(70, 70, 70)
                 .addComponent(ItemsLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -238,12 +235,12 @@ public class Inventory extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(InventoryLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(HomeButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(InventoryLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(UserIdlabel, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(HomeButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(UserIdlabel, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ItemsLabel)
@@ -290,6 +287,7 @@ public class Inventory extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void HomeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HomeButtonActionPerformed

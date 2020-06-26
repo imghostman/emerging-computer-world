@@ -5,7 +5,6 @@
  */
 package EmergingComputerWorld;
 
-import java.awt.Graphics;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.SwingUtilities;
@@ -28,7 +27,6 @@ public class Splash extends javax.swing.JFrame {
 
     public void updateSplash() {
         setVisible(true);
-        System.out.println("start");
         loadingBar.setValue(0);
         loadingBar.setStringPainted(true);
 
@@ -38,20 +36,22 @@ public class Splash extends javax.swing.JFrame {
                 // Runs inside of the Swing UI thread
                 SwingUtilities.invokeLater(() -> {
                     loadingBar.setValue(i);
-                    if(i==100){
+                    if (i == 100) {
                         this.dispose();
-                         Manager.getInstance().loginFrame.setVisible(true);
+                       // if(PreferenceMan.getInstance().getPreference())
+                            
+                        Manager.getInstance().loginFrame.setVisible(true);
                     }
                 });
                 try {
-                    java.lang.Thread.sleep(30);
+                    java.lang.Thread.sleep(50);
                 } catch (InterruptedException ex) {
                     Logger.getLogger(Splash.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
-        }).start();     
+        }).start();
     }
-    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -65,9 +65,6 @@ public class Splash extends javax.swing.JFrame {
         loadingBar = new javax.swing.JProgressBar();
         image = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        setLocationByPlatform(true);
         setUndecorated(true);
         setResizable(false);
         setType(java.awt.Window.Type.POPUP);
@@ -78,24 +75,26 @@ public class Splash extends javax.swing.JFrame {
         loadingBar.setFont(new java.awt.Font("Tahoma", 3, 11)); // NOI18N
         loadingBar.setForeground(new java.awt.Color(0, 153, 153));
         loadingBar.setAutoscrolls(true);
-        jPanel1.add(loadingBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 480, 610, 30));
+        jPanel1.add(loadingBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 390, 610, 20));
 
         image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/EmergingComputerWorld/Screenshot(1).png"))); // NOI18N
         image.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(image, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -40, 620, 570));
+        jPanel1.add(image, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -50, 610, 540));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 610, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 609, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 542, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        setSize(new java.awt.Dimension(610, 542));
+        setSize(new java.awt.Dimension(609, 490));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 

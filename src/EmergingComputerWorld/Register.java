@@ -17,6 +17,26 @@ public class Register extends javax.swing.JFrame {
     /**
      * Creates new form Register
      */
+    public void setAllFieldsToDefault() {
+        txtUserid.setText("");
+        txtShopName.setText("");
+        txtShopAddress.setText("");
+        txtShopPhone1.setText("");
+        txtShopphone2.setText("");
+        txtEmail.setText("");
+        txtpassword.setText("");
+        txtConfirmPassword.setText("");
+        LapNum.setValue(0);
+        CAnum.setValue(0);
+        CCnum.setValue(0);
+        DSnum.setValue(0);
+        desktopnum.setValue(0);
+        PrinterNum.setValue(0);
+        NetworkingNum.setValue(0);
+        Notebooknum.setValue(0);
+
+    }
+
     public Register() {
         initComponents();
         setLocationRelativeTo(null);
@@ -51,6 +71,7 @@ public class Register extends javax.swing.JFrame {
         txtShopName = new javax.swing.JTextField();
         txtShopphone2 = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
+        jLabel1 = new javax.swing.JLabel();
         StockDetailPannel = new javax.swing.JPanel();
         laplabel = new javax.swing.JLabel();
         LapNum = new javax.swing.JSpinner();
@@ -71,8 +92,9 @@ public class Register extends javax.swing.JFrame {
         CreateAccountButton = new javax.swing.JButton();
 
         setUndecorated(true);
+        setResizable(false);
 
-        NewAccountLabel.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        NewAccountLabel.setFont(new java.awt.Font("Segoe Script", 1, 36)); // NOI18N
         NewAccountLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         NewAccountLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/EmergingComputerWorld/3DMouse.png"))); // NOI18N
         NewAccountLabel.setText("New Account");
@@ -112,16 +134,14 @@ public class Register extends javax.swing.JFrame {
         UserIdLabel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         UserIdLabel.setText("User ID :");
 
-        txtConfirmPassword.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtConfirmPasswordActionPerformed(evt);
-            }
-        });
+       
+        jLabel1.setText("(Only Numeric Id Allowed)");
 
         javax.swing.GroupLayout ShopDetailsPannelLayout = new javax.swing.GroupLayout(ShopDetailsPannel);
         ShopDetailsPannel.setLayout(ShopDetailsPannelLayout);
         ShopDetailsPannelLayout.setHorizontalGroup(
             ShopDetailsPannelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(ShopDetailsPannelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(ShopDetailsPannelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -152,11 +172,12 @@ public class Register extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(txtShopAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(ShopDetailsPannelLayout.createSequentialGroup()
-                        .addComponent(ShopPh1Label)
+                        .addGroup(ShopDetailsPannelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(ShopPh1Label, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(txtShopPhone1, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
-            .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         ShopDetailsPannelLayout.setVerticalGroup(
             ShopDetailsPannelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -165,7 +186,9 @@ public class Register extends javax.swing.JFrame {
                 .addGroup(ShopDetailsPannelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(UserIdLabel)
                     .addComponent(txtUserid, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(35, 35, 35)
+                .addGap(3, 3, 3)
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
                 .addGroup(ShopDetailsPannelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ShopNameLabel)
                     .addComponent(txtShopName, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -330,22 +353,20 @@ public class Register extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
+                .addComponent(ShopDetailsPannel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 178, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(NewAccountLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(177, 177, 177)
-                        .addComponent(BackButton, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(ShopDetailsPannel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 178, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(StockDetailPannel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(20, 20, 20))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(CreateAccountButton, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(63, 63, 63))))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(StockDetailPannel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(20, 20, 20))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(CreateAccountButton, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(59, 59, 59))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(244, 244, 244)
+                .addComponent(NewAccountLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(BackButton, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -355,12 +376,14 @@ public class Register extends javax.swing.JFrame {
                     .addComponent(NewAccountLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(ShopDetailsPannel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(ShopDetailsPannel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(StockDetailPannel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(37, 37, 37)
-                        .addComponent(CreateAccountButton)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(CreateAccountButton)
+                        .addGap(21, 21, 21))))
         );
 
         pack();
@@ -374,26 +397,24 @@ public class Register extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Then, Click on Create Button");
                 break;
             case JOptionPane.YES_OPTION:
-          
+
                 Manager.getInstance().loginFrame.setVisible(true);
                 setVisible(false);
                 break;
         }
 
     }//GEN-LAST:event_BackButtonActionPerformed
-
-    private void txtConfirmPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtConfirmPasswordActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtConfirmPasswordActionPerformed
-
+  
     private void CreateAccountButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreateAccountButtonActionPerformed
         // TODO add your handling code here:
-        if (txtUserid.getText().equals("") || txtShopName.getText().equals("") || 
-                txtShopAddress.getText().equals("") || txtShopPhone1.getText().equals("") || 
-                txtShopphone2.getText().equals("") || txtEmail.getText().equals("") || 
-                txtpassword.getPassword() == null || txtConfirmPassword.getPassword() == null) {
+        String password = new String(txtpassword.getPassword());
+        String password2 = new String(txtConfirmPassword.getPassword());
+        if (txtUserid.getText().equals("") || txtShopName.getText().equals("")
+                || txtShopAddress.getText().equals("") || txtShopPhone1.getText().equals("")
+                || txtShopphone2.getText().equals("") || txtEmail.getText().equals("")
+                || password == null || password2 == null) {
             JOptionPane.showMessageDialog(null, "Fill all the details of form");
-        } else if (txtpassword.getPassword() != txtConfirmPassword.getPassword()) {
+        } else if (!password.equals(password2)) {
             JOptionPane.showMessageDialog(null, "Passwords Don`t Match");
         } else {
             try {
@@ -401,19 +422,19 @@ public class Register extends javax.swing.JFrame {
                 Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/stockmanagement?&serverTimezone=UTC", "root", "");
                 int sid, q[] = new int[8];
                 String pass, sql, sql1, sql2, name, add, email, contact1, contact2;
-                
+
                 sid = Integer.parseInt(txtUserid.getText());
                 name = txtShopName.getText();
                 add = txtShopAddress.getText();
                 contact1 = txtShopphone2.getText();
                 contact2 = txtShopphone2.getText();
                 email = txtEmail.getText();
-                pass = new String(txtpassword.getPassword());
-                
+                pass = password;
+
                 sql = "insert into shop values(" + sid + ",'" + name + "','" + add + "','" + contact1 + "','" + contact2 + "','" + email + "');";
                 Statement st = con.createStatement();
                 st.executeUpdate(sql);
-                
+
                 q[0] = (int) LapNum.getValue();
                 q[1] = (int) CAnum.getValue();
                 q[2] = (int) CCnum.getValue();
@@ -431,6 +452,7 @@ public class Register extends javax.swing.JFrame {
                     st1.executeUpdate(sql1);
                 }
                 Manager.getInstance().loginFrame.setVisible(true);
+                setAllFieldsToDefault();
                 setVisible(false);
             } catch (NumberFormatException e) {
                 JOptionPane.showMessageDialog(this, "ID must be NUMERIC");
@@ -441,7 +463,7 @@ public class Register extends javax.swing.JFrame {
 
     }//GEN-LAST:event_CreateAccountButtonActionPerformed
 
-    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel AddressLabel;
     private javax.swing.JButton BackButton;
@@ -471,6 +493,7 @@ public class Register extends javax.swing.JFrame {
     private javax.swing.JLabel UserIdLabel;
     private javax.swing.JSpinner desktopnum;
     private javax.swing.JLabel emailLabel;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel laplabel;
     private javax.swing.JPasswordField txtConfirmPassword;

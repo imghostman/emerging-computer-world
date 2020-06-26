@@ -3,10 +3,11 @@
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="undecorated" type="boolean" value="true"/>
+    <Property name="resizable" type="boolean" value="false"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
-    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="true"/>
   </SyntheticProperties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
@@ -23,10 +24,7 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <Component id="InvoicePannel" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-          </Group>
+          <Component id="InvoicePannel" min="-2" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -66,7 +64,7 @@
                           <Component id="invoiceLabel" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="41" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -92,7 +90,7 @@
         <Component class="javax.swing.JLabel" name="invoiceLabel">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="36" style="1"/>
+              <Font name="Segoe Script" size="36" style="1"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
@@ -135,69 +133,74 @@
                                   <Component id="NotebookLabel" alignment="0" max="32767" attributes="0"/>
                                   <Component id="DesktopLabel" alignment="0" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="44" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="desktopsQuantity" alignment="1" min="-2" pref="76" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="1" attributes="0">
-                                      <Component id="notebookQuantity" min="-2" pref="76" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="CAQuantity" min="-2" max="-2" attributes="0"/>
-                                          <Component id="laptopQuantity" min="-2" max="-2" attributes="0"/>
-                                          <Component id="CCQuantity" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="printersQuantity" alignment="0" min="-2" pref="63" max="-2" attributes="0"/>
-                                          <Component id="DSQuantity" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="networkingQuantity" alignment="0" min="-2" pref="68" max="-2" attributes="0"/>
+                                          <Component id="networkingQuantity" min="-2" pref="119" max="-2" attributes="0"/>
+                                          <Component id="printersQuantity" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="DSQuantity" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="CCQuantity" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="CAQuantity" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="laptopQuantity" alignment="0" max="32767" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Component id="notebookQuantity" min="-2" pref="127" max="-2" attributes="0"/>
+                                          <Component id="desktopsQuantity" alignment="1" min="-2" pref="127" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
-                              <EmptySpace min="-2" pref="120" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                  <Component id="notebookPpi" alignment="0" pref="0" max="32767" attributes="0"/>
-                                  <Component id="networkingPpi" alignment="0" pref="0" max="32767" attributes="0"/>
-                                  <Component id="printersPpi" alignment="0" pref="0" max="32767" attributes="0"/>
+                              <EmptySpace min="69" pref="69" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="notebookPpi" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="networkingPpi" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="printersPpi" alignment="0" max="32767" attributes="0"/>
                                   <Component id="storagePpi" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="componentsPpi" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="desktopsPpi" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="laptopPpi" min="-2" pref="145" max="-2" attributes="0"/>
                                   <Component id="accessoriesPpi" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="laptopPpi" alignment="0" min="-2" pref="67" max="-2" attributes="0"/>
-                                  <Component id="desktopsPpi" pref="0" max="32767" attributes="0"/>
+                                  <Component id="componentsPpi" alignment="0" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace min="-2" pref="151" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="accessoriesAmount" min="-2" max="-2" attributes="0"/>
-                                  <Component id="componentAmount" min="-2" max="-2" attributes="0"/>
-                                  <Component id="drivesAmount" min="-2" max="-2" attributes="0"/>
-                                  <Component id="notebookAmount" alignment="0" pref="0" max="32767" attributes="0"/>
-                                  <Component id="networkingAmount" alignment="0" pref="0" max="32767" attributes="0"/>
-                                  <Component id="printersAmount" alignment="0" pref="0" max="32767" attributes="0"/>
-                                  <Component id="laptopAmount" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="desktopsAmount" alignment="0" pref="0" max="32767" attributes="0"/>
+                              <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                          <Component id="notebookAmount" max="32767" attributes="0"/>
+                                          <Component id="laptopAmount" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="accessoriesAmount" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="componentAmount" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="drivesAmount" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="printersAmount" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="networkingAmount" alignment="0" max="32767" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace pref="20" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Component id="desktopsAmount" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace min="-2" pref="94" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                              <Component id="itemLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="quantityLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="92" max="-2" attributes="0"/>
+                              <Component id="ppiLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+                              <Component id="amountLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="92" max="-2" attributes="0"/>
-                                      <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
-                                      <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="jSeparator1" min="-2" pref="244" max="-2" attributes="0"/>
-                                          <Component id="totalJLabel" min="-2" pref="336" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
+                                  <Component id="jSeparator1" min="-2" pref="244" max="-2" attributes="0"/>
+                                  <Component id="totalJLabel" min="-2" pref="336" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                           </Group>
                       </Group>
+                      <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
@@ -211,14 +214,14 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                              <Component id="itemLabel" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="quantityLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="ppiLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="amountLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
@@ -289,7 +292,7 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="jLabel3">
+            <Component class="javax.swing.JLabel" name="itemLabel">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="22" style="1"/>
@@ -297,7 +300,7 @@
                 <Property name="text" type="java.lang.String" value="Items"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel4">
+            <Component class="javax.swing.JLabel" name="quantityLabel">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="22" style="1"/>
@@ -305,7 +308,7 @@
                 <Property name="text" type="java.lang.String" value="Quantity"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel5">
+            <Component class="javax.swing.JLabel" name="ppiLabel">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="22" style="1"/>
@@ -313,7 +316,7 @@
                 <Property name="text" type="java.lang.String" value="Price per Item"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel6">
+            <Component class="javax.swing.JLabel" name="amountLabel">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="22" style="1"/>
