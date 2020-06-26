@@ -52,9 +52,9 @@ public class Home extends javax.swing.JFrame {
 
         UserIdlabel = new javax.swing.JLabel();
         ShopnameLabel = new javax.swing.JLabel();
-        LogOutButton = new javax.swing.JButton();
         shopDetails = new javax.swing.JLabel();
         contactDetails = new javax.swing.JLabel();
+        LogOutButton = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
         optionPannel = new javax.swing.JPanel();
         CreateBillButton = new javax.swing.JButton();
@@ -74,6 +74,19 @@ public class Home extends javax.swing.JFrame {
         ShopnameLabel.setText("Emerging Computer World");
         ShopnameLabel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
+        shopDetails.setBackground(new java.awt.Color(0, 0, 0));
+        shopDetails.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        shopDetails.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        shopDetails.setText("Shop Address");
+        shopDetails.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        contactDetails.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        contactDetails.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        contactDetails.setText("Contact Details");
+        contactDetails.setToolTipText("");
+        contactDetails.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        contactDetails.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
         LogOutButton.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         LogOutButton.setForeground(new java.awt.Color(255, 255, 255));
         LogOutButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/EmergingComputerWorld/Button-Log-Off-icon.png"))); // NOI18N
@@ -83,20 +96,6 @@ public class Home extends javax.swing.JFrame {
                 LogOutButtonActionPerformed(evt);
             }
         });
-
-        shopDetails.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        shopDetails.setForeground(new java.awt.Color(51, 51, 51));
-        shopDetails.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        shopDetails.setText("Shop Address");
-        shopDetails.setBorder(javax.swing.BorderFactory.createCompoundBorder());
-
-        contactDetails.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        contactDetails.setForeground(new java.awt.Color(51, 51, 51));
-        contactDetails.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        contactDetails.setText("Contact Details");
-        contactDetails.setToolTipText("");
-        contactDetails.setBorder(javax.swing.BorderFactory.createCompoundBorder());
-        contactDetails.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         optionPannel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Options", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Tahoma", 1, 18))); // NOI18N
 

@@ -321,7 +321,7 @@ public class Login extends javax.swing.JFrame {
                                 Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
                             }
                             trayIcon.displayMessage("Congratulations", "Successfully Logged In", MessageType.INFO);
-
+Manager.getInstance().createFrames();
                             Manager.getInstance().homeFrame.setVisible(true);
                             txtUserId.setText("");
                             txtPassword.setText("");
@@ -394,7 +394,7 @@ public class Login extends javax.swing.JFrame {
             } else {
                 PreferenceMan.getInstance().setPreference(true);
             }
-            JOptionPane.showMessageDialog(null, "Please Restart");
+            JOptionPane.showMessageDialog(null, "Please Restart Manually");
 
         }
        System.exit(0);
