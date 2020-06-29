@@ -74,7 +74,7 @@ public class Home extends javax.swing.JFrame {
         ShopnameLabel.setText("Emerging Computer World");
         ShopnameLabel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        shopDetails.setBackground(new java.awt.Color(0, 0, 0));
+        shopDetails.setBackground(new java.awt.Color(255, 255, 255));
         shopDetails.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         shopDetails.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         shopDetails.setText("Shop Address");

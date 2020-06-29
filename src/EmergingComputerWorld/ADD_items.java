@@ -274,7 +274,7 @@ public class ADD_items extends javax.swing.JFrame {
         itemNum.setValue(0);
     }//GEN-LAST:event_ResetButtonActionPerformed
 
-    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel AddRemovePannel;
     private javax.swing.JButton Back2InventoryButton;

@@ -23,27 +23,21 @@ import net.proteanit.sql.DbUtils;
  */
 public class Supplist extends javax.swing.JFrame {
 
-   
     Connection con;
     Statement st;
     PreparedStatement pst = null;
     ResultSet rs;
     int lastid;
 
-    public void getLastId() {
-        try {
-            Class.forName("java.sql.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/stockmanagement?&serverTimezone=UTC", "root", "");
-            String sql = "SELECT max(suppid) from supplier";
-            st = con.createStatement();
-            rs = st.executeQuery(sql);
-            if (rs.next()) {
-                lastid = rs.getInt(1);
-                lastid++;
-
-            }
-        } catch (ClassNotFoundException | SQLException ex) {
-            Logger.getLogger(Receipt.class.getName()).log(Level.SEVERE, null, ex);
+    public void getLastId() throws ClassNotFoundException, SQLException {
+        Class.forName("java.sql.Driver");
+        con = DriverManager.getConnection("jdbc:mysql://localhost:3306/stockmanagement?&serverTimezone=UTC", "root", "");
+        String sql = "SELECT max(suppid) from supplier";
+        st = con.createStatement();
+        rs = st.executeQuery(sql);
+        if (rs.next()) {
+            lastid = rs.getInt(1);
+            lastid++;
         }
     }
 
@@ -53,7 +47,8 @@ public class Supplist extends javax.swing.JFrame {
     public Supplist() {
         initComponents();
         setLocationRelativeTo(null);
-     
+        lastid = 0;
+
         try {
             Class.forName("java.sql.Driver");
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/stockmanagement?&serverTimezone=UTC", "root", "");
@@ -379,7 +374,8 @@ public class Supplist extends javax.swing.JFrame {
     private void insertButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_insertButtonActionPerformed
         // TODO add your handling code here:
         if (txtName.getText().equals("") || txtAddress.getText().equals("")
-                || txtContact.getText().equals("") || txtAlternativeContact.getText().equals("")
+                || txtContact.getText().equals("")
+                || txtAlternativeContact.getText().equals("")
                 || txtEmail.getText().equals("")) {
             JOptionPane.showMessageDialog(null, "Fill all the details of form");
         } else {
@@ -394,6 +390,7 @@ public class Supplist extends javax.swing.JFrame {
                 phone2 = txtAlternativeContact.getText();
                 mail = txtEmail.getText();
 
+                getLastId();
                 sql = " insert into supplier (suppid,supp_name,supp_add,suppphone1,suppphone2,suppemail) values('" + lastid + "','" + name + "','" + add + "','" + phone1 + "','" + phone2 + "','" + mail + "');";
 
                 st = con.createStatement();
@@ -403,12 +400,10 @@ public class Supplist extends javax.swing.JFrame {
                 model.setRowCount(0);
                 showTableData();
                 JOptionPane.showMessageDialog(null, "Inserted Successfully");
-
             } catch (ClassNotFoundException | SQLException e1) {
                 JOptionPane.showMessageDialog(null, e1.getMessage());
             }
         }
-
 
     }//GEN-LAST:event_insertButtonActionPerformed
 
@@ -497,8 +492,6 @@ public class Supplist extends javax.swing.JFrame {
 
 
     }//GEN-LAST:event_updateButtonActionPerformed
-
-
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

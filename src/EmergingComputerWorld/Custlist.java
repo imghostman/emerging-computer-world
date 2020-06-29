@@ -25,7 +25,7 @@ public class Custlist extends javax.swing.JFrame {
      */
     public Custlist() {
         initComponents();
-    setLocationRelativeTo(null);
+        setLocationRelativeTo(null);
 
         try {
             Class.forName("java.sql.Driver");
@@ -232,39 +232,29 @@ public class Custlist extends javax.swing.JFrame {
     private void showButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showButtonActionPerformed
 
         // TODO add your handling code here:
-            try {                                         
-                
-                
-                try {
-                    
-                    Class.forName("java.sql.Driver");
-                } catch (ClassNotFoundException ex) {
-                    Logger.getLogger(Custlist.class.getName()).log(Level.SEVERE, null, ex);
-                }
-                Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/stockmanagement?&serverTimezone=UTC", "root", "");
-                String sql, id, name, add, phone1, phone2, mail, bill, bdate;
-                sql = "select * from customer where shopid=" + Manager.userId + ";";
-                Statement st = con.createStatement();
-                ResultSet rs = st.executeQuery(sql);
-                DefaultTableModel model = (DefaultTableModel) TableOfCustomer.getModel();
-                model.setRowCount(0);
-                while (rs.next()) {
-                    id = rs.getString("cust_id");
-                    name = rs.getString("cust_name");
-                    add = rs.getString("cust_add");
-                    phone1 = rs.getString("custphone1");
-                    phone2 = rs.getString("custphone2");
-                    mail = rs.getString("custemail");
-                    bill = rs.getString("total");
-                    bdate = rs.getString("billdate");
-                    model.addRow(new Object[]{id, name, add, phone1, phone2, mail, bill, bdate});
-                }
-                
-                
-            } catch (SQLException ex) {
-                Logger.getLogger(Custlist.class.getName()).log(Level.SEVERE, null, ex);
+        try {
+            Class.forName("java.sql.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/stockmanagement?&serverTimezone=UTC", "root", "");
+            String sql, id, name, add, phone1, phone2, mail, bill, bdate;
+            sql = "select * from customer where shopid=" + Manager.userId + ";";
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            DefaultTableModel model = (DefaultTableModel) TableOfCustomer.getModel();
+            model.setRowCount(0);
+            while (rs.next()) {
+                id = rs.getString("cust_id");
+                name = rs.getString("cust_name");
+                add = rs.getString("cust_add");
+                phone1 = rs.getString("custphone1");
+                phone2 = rs.getString("custphone2");
+                mail = rs.getString("custemail");
+                bill = rs.getString("total");
+                bdate = rs.getString("billdate");
+                model.addRow(new Object[]{id, name, add, phone1, phone2, mail, bill, bdate});
             }
-
+        } catch (SQLException | ClassNotFoundException ex) {
+            Logger.getLogger(Custlist.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
     }//GEN-LAST:event_showButtonActionPerformed
 

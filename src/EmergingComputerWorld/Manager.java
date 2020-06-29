@@ -21,8 +21,7 @@ public class Manager {
     public JFrame billFrame;
     public JFrame supplistFrame;
 
-    private Manager()
-    {
+    private Manager() {
         loginFrame = new Login();
         registerFrame = new Register();
     }
@@ -38,6 +37,7 @@ public class Manager {
     }
 
     private static class Singleton {
+
         private static final Manager INSTANCE = new Manager();
     }
 }

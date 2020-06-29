@@ -404,7 +404,7 @@ public class Register extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_BackButtonActionPerformed
-  
+
     private void CreateAccountButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreateAccountButtonActionPerformed
         // TODO add your handling code here:
         String password = new String(txtpassword.getPassword());

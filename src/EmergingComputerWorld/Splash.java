@@ -38,8 +38,8 @@ public class Splash extends javax.swing.JFrame {
                     loadingBar.setValue(i);
                     if (i == 100) {
                         this.dispose();
-                       // if(PreferenceMan.getInstance().getPreference())
-                            
+                        // if(PreferenceMan.getInstance().getPreference())
+
                         Manager.getInstance().loginFrame.setVisible(true);
                     }
                 });

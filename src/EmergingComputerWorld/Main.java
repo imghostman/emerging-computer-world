@@ -32,9 +32,9 @@ public class Main extends Thread {
     public static void main(String args[]) throws InterruptedException {
         try {
             if (PreferenceMan.getInstance().getPreference()) {
-                 UIManager.setLookAndFeel(NoireLookAndFeel.class.getName());
+                UIManager.setLookAndFeel(NoireLookAndFeel.class.getName());
             } else {
-                UIManager.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel"); 
+                UIManager.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");
             }
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);

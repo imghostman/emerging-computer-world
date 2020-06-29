@@ -16,7 +16,7 @@ import java.text.SimpleDateFormat;
 public class Bill extends javax.swing.JFrame {
 
     //int userid;
-     Connection con;
+    Connection con;
     Statement st;
     PreparedStatement pst = null;
     ResultSet rs;
@@ -27,7 +27,7 @@ public class Bill extends javax.swing.JFrame {
     public Bill() {
         initComponents();
         setLocationRelativeTo(null);
-          txtShopId.setText("" + Manager.userId);
+        txtShopId.setText("" + Manager.userId);
     }
 
     /**
@@ -411,12 +411,11 @@ public class Bill extends javax.swing.JFrame {
                 || txtEmailId.getText().equals("")) {
             JOptionPane.showMessageDialog(null, "Fill all Customer Details in Form");
         } else {
-
             try {
                 Class.forName("java.sql.Driver");
-                 con = DriverManager.getConnection("jdbc:mysql://localhost:3306/stockmanagement?&serverTimezone=UTC", "root", "");
+                con = DriverManager.getConnection("jdbc:mysql://localhost:3306/stockmanagement?&serverTimezone=UTC", "root", "");
                 sql = "select * from hwstock where shopid=" + Manager.userId + ";";
-               st = con.createStatement();
+                st = con.createStatement();
                 rs = st.executeQuery(sql);
                 rs.next();
                 for (int i = 0; i < 8; i++) {

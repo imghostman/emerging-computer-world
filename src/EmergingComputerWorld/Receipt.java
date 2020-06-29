@@ -20,29 +20,25 @@ public class Receipt extends javax.swing.JFrame {
     Statement st;
     PreparedStatement pst = null;
     ResultSet rs;
-    
-    
-    
+
     int q[] = new int[8];
     float s1[] = new float[8];
     float amt[] = new float[8];
     float sum = 0.0f;
     int lastid;
     String name, add, email, contact1, contact2, billdate;
-    
-    public void getLastId()
-    {
+
+    public void getLastId() {
         try {
             Class.forName("java.sql.Driver");
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/stockmanagement?&serverTimezone=UTC", "root", "");
             String sql = "SELECT max(cust_id) from customer";
-            st=con.createStatement();
-            rs=st.executeQuery(sql);
-            if(rs.next())
-            {
-              lastid = rs.getInt(1);
-              lastid++;
-              
+            st = con.createStatement();
+            rs = st.executeQuery(sql);
+            if (rs.next()) {
+                lastid = rs.getInt(1);
+                lastid++;
+
             }
         } catch (ClassNotFoundException | SQLException ex) {
             Logger.getLogger(Receipt.class.getName()).log(Level.SEVERE, null, ex);
@@ -84,7 +80,7 @@ public class Receipt extends javax.swing.JFrame {
         try {
             Class.forName("java.sql.Driver");
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/stockmanagement?&serverTimezone=UTC", "root", "");
-            
+
             String sql;
             sql = "select  hwstock.hid,hname,sp from hwlist,hwstock where hwstock.hid=hwlist.hid and shopid=" + Manager.userId + ";";
             st = con.createStatement();
@@ -94,7 +90,7 @@ public class Receipt extends javax.swing.JFrame {
                 s1[i] = Float.parseFloat(rs.getString("sp"));
                 rs.next();
             }
-            
+
             laptopPpi.setText("" + s1[0]);
             accessoriesPpi.setText("" + s1[1]);
             componentsPpi.setText("" + s1[2]);
@@ -103,12 +99,12 @@ public class Receipt extends javax.swing.JFrame {
             networkingPpi.setText("" + s1[5]);
             notebookPpi.setText("" + s1[6]);
             desktopsPpi.setText("" + s1[7]);
-            
+
             for (int i = 0; i < 8; i++) {
                 amt[i] = q[i] * s1[i];
                 sum += amt[i];
             }
-            
+
             laptopAmount.setText("" + amt[0]);
             accessoriesAmount.setText("" + amt[1]);
             componentAmount.setText("" + amt[2]);
@@ -536,10 +532,10 @@ public class Receipt extends javax.swing.JFrame {
             case JOptionPane.YES_OPTION:
                 try {
                 Class.forName("java.sql.Driver");
-               con = DriverManager.getConnection("jdbc:mysql://localhost:3306/stockmanagement?&serverTimezone=UTC", "root", "");
+                con = DriverManager.getConnection("jdbc:mysql://localhost:3306/stockmanagement?&serverTimezone=UTC", "root", "");
                 String sql, sql1;
                 sql = " insert into customer(cust_id,cust_name,cust_add,custphone1,custphone2,custemail,total,billdate,shopid) values('" + lastid + "','" + name + "','" + add + "','" + contact1 + "','" + contact1 + "','" + email + "'," + sum + ",'" + billdate + "'," + Manager.userId + ");";
-               st = con.createStatement();
+                st = con.createStatement();
                 st.executeUpdate(sql);
                 for (int id = 311, i = 0; id <= 318 && i < 8; id++, i++) {
                     sql1 = "update hwstock set quantity=quantity-" + q[i] + " where shopid=" + Manager.userId + " and hid=" + id + ";";
